@@ -1,0 +1,15 @@
+C:\Users\mathe\Desktop\Back-End 5\bin\Debug\net6.0\Back-End 5.exe
+C:\Users\mathe\Desktop\Back-End 5\bin\Debug\net6.0\Back-End 5.deps.json
+C:\Users\mathe\Desktop\Back-End 5\bin\Debug\net6.0\Back-End 5.runtimeconfig.json
+C:\Users\mathe\Desktop\Back-End 5\bin\Debug\net6.0\Back-End 5.dll
+C:\Users\mathe\Desktop\Back-End 5\bin\Debug\net6.0\Back-End 5.pdb
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\Back-End 5.csproj.AssemblyReference.cache
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\Back-End 5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\Back-End 5.AssemblyInfoInputs.cache
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\Back-End 5.AssemblyInfo.cs
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\Back-End 5.csproj.CoreCompileInputs.cache
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\Back-End 5.dll
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\refint\Back-End 5.dll
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\Back-End 5.pdb
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\Back-End 5.genruntimeconfig.cache
+C:\Users\mathe\Desktop\Back-End 5\obj\Debug\net6.0\ref\Back-End 5.dll
