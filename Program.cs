@@ -32,7 +32,26 @@ Endereco: {novaPf.endereco.logradouro}
 Maior de idade: {novaPf.ValidarDataNascimento(novaPf.DataNascimento)}
 ");*/
 
-/*
+
 PessoaJuridica metodoPj = new PessoaJuridica();
-Console.WriteLine($"{metodoPj.ValidarCnpj("00.000.000/0002-00")}");
-*/
+PessoaJuridica novaPj = new PessoaJuridica();
+Endereco novoEndPj = new Endereco();
+
+novaPj.nome = "InfoTech Informática";
+novaPj.cnpj = "00.000.000/0001-00";
+novaPj.razao = "Razao Social PJ";
+novaPj.rendimento = 8000.5f;
+novoEndPj.logradouro = "Rua Canadá";
+novoEndPj.complemento = "Apartamento Azul";
+novoEndPj.numero = 505;
+novoEndPj.endComercial = true;
+novaPj.endereco = novoEndPj;
+
+Console.WriteLine(@$"
+Nome: {novaPj.nome}
+Razão Social: {novaPj.razao}
+CNPJ: {novaPj.cnpj}
+CNPJ Válido? {metodoPj.ValidarCnpj(novaPj.cnpj)}
+");
+
+//Console.WriteLine($"{metodoPj.ValidarCnpj("00.000.000/0002-00")}");
