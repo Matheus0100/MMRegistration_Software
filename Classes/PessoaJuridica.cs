@@ -5,44 +5,44 @@ namespace Back_End_5.Classes
 {
     public class PessoaJuridica : Pessoa, IPessoaJuridica
     {
-        public string? cnpj { get; set; }
-        public string? razao { get; set; }
+        public string? CNPJ { get; set; }
+        public string? RazaoSocial { get; set; }
 
-        public override float PagarImposto(float rendimento)
+        public override float PagarImposto(float Rendimento)
         {
-            if (rendimento <= 1500)
+            if (Rendimento <= 1500)
             {
-                return (rendimento * 0.03f);
+                return (Rendimento * 0.03f);
             }
-            else if (rendimento <= 3500)
+            else if (Rendimento <= 3500)
             {
-                return (rendimento * 0.05f);
+                return (Rendimento * 0.05f);
             }
-            else if (rendimento <= 6000)
+            else if (Rendimento <= 6000)
             {
-                return (rendimento * 0.07f);
+                return (Rendimento * 0.07f);
             }
             else
             {
-                return (rendimento * 0.09f);
+                return (Rendimento * 0.09f);
             }
         }
 
-        public bool ValidarCnpj(string cnpj)
+        public bool ValidarCnpj(string CNPJ)
         {
             //o Regex vai validar o formato da entrada dos dados.
-            if (Regex.IsMatch(cnpj, @"(^(\d{2}.\d{3}.\d{3}/\d{4}-\d{2})|(\d{14})$)"))
+            if (Regex.IsMatch(CNPJ, @"(^(\d{2}.\d{3}.\d{3}/\d{4}-\d{2})|(\d{14})$)"))
             {
-                if (cnpj.Length == 18)
+                if (CNPJ.Length == 18)
                 {
-                    if (cnpj.Substring(11, 4) == "0001")
+                    if (CNPJ.Substring(11, 4) == "0001")
                     {
                         return true;
                     }
                 }
-                else if (cnpj.Length == 14)
+                else if (CNPJ.Length == 14)
                 {
-                    if (cnpj.Substring(8, 4) == "0001")
+                    if (CNPJ.Substring(8, 4) == "0001")
                     {
                         return true;
                     }
