@@ -168,8 +168,37 @@ do
             PessoaJuridica metodoPj = new PessoaJuridica();
             PessoaJuridica novaPj = new PessoaJuridica();
             Endereco novoEndPj = new Endereco();
+            //Mensagem de início
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("Cadastro de Pessoa Jurídica escolhido");
+            Thread.Sleep(2000);
+            Console.ResetColor();
+            Console.Clear();
+                //Nome da empresa
+            Console.WriteLine(@$"Informe o nome da empresa:");
+            novaPj.Nome = Console.ReadLine();
 
-            novaPj.Nome = "InfoTech Informática";
+            //novaPj.Nome = "InfoTech Informática";
+            // Validar CNPJ
+            bool CnpjValido;
+            do
+            {
+                Console.Clear();
+
+                Console.WriteLine(@$"Informe o CNPJ:");
+                novaPj.CNPJ = Console.ReadLine();
+                //string PJCNPJ = Console.ReadLine();
+                //metodoPj.ValidarCnpj() = PJCNPJ;
+
+            //metodoPj.ValidarCnpj(novaPj.CNPJ);
+            if(metodoPj.ValidarCnpj(novaPj.CNPJ) == false)
+            {
+                Console.WriteLine("Por favor, insira um CNPJ válido.");
+            }
+            else{};
+            } while ( metodoPj.ValidarCnpj(novaPj.CNPJ) == true);
+            
+
             novaPj.CNPJ = "00.000.000/0001-00";
             novaPj.RazaoSocial = "Razao Social PJ";
             novaPj.Rendimento = 8000.5f;//f de float
