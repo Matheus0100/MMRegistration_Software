@@ -8,7 +8,7 @@ namespace Back_End_5.Personalization
             Console.ForegroundColor = ConsoleColor.White;
 
             Console.Write(texto);
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Console.Write(". ");
                 Thread.Sleep(tempo);
