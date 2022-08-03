@@ -73,7 +73,7 @@ do
 
                         Console.WriteLine($"Digite o Nome Completo:");
                         novaPf.Nome = Console.ReadLine();
-
+/*
                         // ******* Loop para validar data de nascimento ************ //
                         bool DataValida;
                         do
@@ -124,7 +124,16 @@ do
                         }
 
                         novaPf.Endereco = novoEnd;
-                        listaPf.Add(novaPf);
+                        //listaPf.Add(novaPf);
+
+                        //StreamWriter sw = new StreamWriter($"{novaPf.Nome}.txt");
+                        //sw.WriteLine(novaPf.Nome);
+                        //sw.Close();
+*/
+                        using (StreamWriter sw = new StreamWriter($"{novaPf.Nome}.txt"))
+                        {
+                            sw.WriteLine(novaPf.Nome);
+                        }
 
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine($"Cadastro realizado com sucesso.");
@@ -133,6 +142,7 @@ do
                         break;
                     case "2":
                         Console.Clear();
+                        /*
                         if (listaPf.Count > 0)
                         {
                             foreach (PessoaFisica CadaPessoa in listaPf)
@@ -153,6 +163,19 @@ do
                             Console.WriteLine($"Lista vazia!!!");
                             Thread.Sleep(3000);
                         }
+                        */
+
+                        using (StreamReader sr = new StreamReader($"Matheus Moura.txt"))
+                        {
+                            string linha;
+                            while ((linha = sr.ReadLine()) != null)
+                            {
+                                Console.WriteLine($"{linha}");
+                            }
+                        }
+                        Console.WriteLine($"Aperte Enter para continuar");
+                        Console.ReadLine();
+
                         break;
                     case "0":
                         Console.Clear();
@@ -266,8 +289,13 @@ do
             
             
             novaPj.Endereco = novoEndPj;
-            listaPj.Add(novaPj);
 
+            metodoPj.Inserir(novaPj);
+
+
+            
+            //listaPj.Add(novaPj);
+            
             Console.Clear();
             Console.WriteLine($"Cadastro realizado com sucesso!");
             Console.Clear();
@@ -276,8 +304,27 @@ do
 
             case "2":
             Console.Clear();
-            //mostrar pessoas jurídicas
+
+            //BUG
+            List<PessoaJuridica> listaPj = metodoPj.Ler();
+
             if (listaPj.Count>0)
+        {
+
+            foreach (PessoaJuridica CadaPessoaJuridica in listaPj)
+            {
+                Console.Clear();
+                Console.WriteLine(@$"
+            Nome: {CadaPessoaJuridica.Nome}
+            Razão Social: {CadaPessoaJuridica.RazaoSocial}
+            CNPJ: {CadaPessoaJuridica.CNPJ}
+            ");
+            Console.WriteLine("Aperte 'Enter' para continuar...");
+            Console.ReadLine();
+            }
+        }
+            //mostrar pessoas jurídicas
+            /*if (listaPj.Count>0)
             {
                 foreach (PessoaJuridica CadaPessoaJuridica in listaPj)
                 {
@@ -291,7 +338,7 @@ do
             Console.WriteLine("Aperte 'Enter' para continuar...");
             Console.ReadLine();
                 }
-            }
+            }*/
             else
             {
                 Console.Clear();

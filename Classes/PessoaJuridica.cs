@@ -7,6 +7,8 @@ namespace Back_End_5.Classes
     {
         public string? CNPJ { get; set; }
         public string? RazaoSocial { get; set; }
+        
+        public string caminho {get; private set;} = "Database/PessoaJuridica.csv";
 
         public override float PagarImposto(float Rendimento)
         {
@@ -50,5 +52,31 @@ namespace Back_End_5.Classes
             }
             return false;
         }
+        public void Inserir(PessoaJuridica pj)
+        {
+            VerificarPastaArquivo(caminho);
+            string[] pjString = {$"{pj.Nome},{pj.CNPJ},{pj.RazaoSocial}"};
+            File.AppendAllLines(caminho, pjString);
+        }
+        public List<PessoaJuridica> Ler(){
+            List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+
+            string[] linhas = File.ReadAllLines(caminho);
+
+            foreach (string cadaLinha in linhas)
+            {
+                string[] atributos = cadaLinha.Split(",");
+
+                PessoaJuridica cadaPj = new PessoaJuridica();
+
+                cadaPj.Nome = atributos[0];
+                cadaPj.CNPJ = atributos[1];
+                cadaPj.RazaoSocial = atributos[2];
+
+                listaPj.Add(cadaPj);
+            }
+            return listaPj;
+        }
+
     }
 }
