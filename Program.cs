@@ -11,7 +11,7 @@ Console.WriteLine(@$"
 BarraCarregamento.Mostrar("Carregando", 600);
 
     // Objetos
-    List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+    //List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
     PessoaJuridica metodoPj = new PessoaJuridica();
     PessoaJuridica novaPj = new PessoaJuridica();
     Endereco novoEndPj = new Endereco();
@@ -73,7 +73,7 @@ do
 
                         Console.WriteLine($"Digite o Nome Completo:");
                         novaPf.Nome = Console.ReadLine();
-/*
+
                         // ******* Loop para validar data de nascimento ************ //
                         bool DataValida;
                         do
@@ -124,12 +124,7 @@ do
                         }
 
                         novaPf.Endereco = novoEnd;
-                        //listaPf.Add(novaPf);
 
-                        //StreamWriter sw = new StreamWriter($"{novaPf.Nome}.txt");
-                        //sw.WriteLine(novaPf.Nome);
-                        //sw.Close();
-*/
                         using (StreamWriter sw = new StreamWriter($"{novaPf.Nome}.txt"))
                         {
                             sw.WriteLine(novaPf.Nome);
@@ -308,6 +303,7 @@ do
             //BUG
             List<PessoaJuridica> listaPj = metodoPj.Ler();
 
+            //mostrar pessoas jurídicas no arquivo .csv
             if (listaPj.Count>0)
         {
 
@@ -323,7 +319,7 @@ do
             Console.ReadLine();
             }
         }
-            //mostrar pessoas jurídicas
+            //mostrar pessoas jurídicas / outro método
             /*if (listaPj.Count>0)
             {
                 foreach (PessoaJuridica CadaPessoaJuridica in listaPj)
