@@ -13,6 +13,10 @@
 #### For Legal Entities, the user must inform:
 #### Company Name, CNPJ, Corporate Name, Address and answer if the address is business.
 
+## *TODO:*
+
+#### Store the data in SQL Server, Create the Front-end of this project and deploy using APIs.
+
 ## *Utilized Technologies:*
 
 - *C#*
