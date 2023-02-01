@@ -26,9 +26,9 @@
 #### To clone use these commands:
 ```
 # Clone this repository
-> git clone https://github.com/Matheus0100/Registration_Software.git
+> git clone https://github.com/Matheus0100/MMRegistration_Software.git
  # Goes to project file
-> cd [project-name]
+> cd {project path on your computer}, example: cd Downloads/MMRegistration_Software
  # execute the project
 > dotnet run
 ```
