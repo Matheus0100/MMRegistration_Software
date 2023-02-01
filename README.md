@@ -1,6 +1,6 @@
 # *Registration system: legal person and physical person*
 
-#### This repository aims to show the operation and code of the registration software for individuals and legal entities, being developed for the back-end course of the SENAI institution.
+#### This repository aims to show the operation and code of the registration software for individuals and legal entities, being developed for my back-end repository, to show my skills with C# and .Net Framework.
 
 ## *Features:*
 
